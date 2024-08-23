@@ -4,7 +4,7 @@ import streamlit as st
 API_URL = "https://api-inference.huggingface.co/models/black-forest-labs/FLUX.1-schnell"
 headers = {"Authorization": "Bearer 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"}
 
-st.title("HI THERE ! IT'S NANDS HERE")
+st.title("WELCOME TO IMAGE GENERATOR - SURYA")
 
 def query(payload):
 	response = requests.post(API_URL, headers=headers, json=payload)
@@ -17,5 +17,5 @@ import io
 from PIL import Image
 image = Image.open(io.BytesIO(image_bytes))
 
-if st.button("Generate Image"):
+if st.button("Generate Output"):
 	st.image(image)
